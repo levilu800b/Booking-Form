@@ -43,14 +43,12 @@ class Form extends React.Component {
               >
                 Date
               </label>
-              <input
+              <input type="date" 
                 value={this.state.date}
                 name="date"
                 onChange={this.changeHandler}
-                type="text"
                 id="defaultFormRegisterNameEx"
                 className="form-control"
-                placeholder="XX/XX/XXXX"
                 required
               />
               <div className="valid-feedback">Looks good!</div>
@@ -62,11 +60,10 @@ class Form extends React.Component {
               >
                 Time
               </label>
-              <input
+              <input type="time"
                 value={this.state.time}
                 name="time"
                 onChange={this.changeHandler}
-                type="text"
                 id="defaultFormRegisterEmailEx2"
                 className="form-control"
                 placeholder="24Hrs Format"
@@ -81,15 +78,24 @@ class Form extends React.Component {
               >
                 Number of Guests
               </label>
-              <input
+              <select 
                 value={this.state.numberofguests}
                 onChange={this.changeHandler}
                 type="numberofguests"
                 id="defaultFormRegisterConfirmEx3"
                 className="form-control"
                 name="numberofguests"
-                placeholder="Choose Your Option"
-              />
+                placeholder="Choose Your Option">
+                  <option value="">Please select</option>
+                  <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+                </select>
             </Col>
           </Row>
           <h2>Details</h2>
